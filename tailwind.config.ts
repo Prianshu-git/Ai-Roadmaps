@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,7 +83,7 @@ export default {
 					400: '#c084fc',
 					500: '#a855f7',
 					600: '#9333ea',
-					700: '#7c2d12',
+					700: '#7c3aed', // updated to a cooler purple
 					800: '#6b21a8',
 					900: '#581c87'
 				},
