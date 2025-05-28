@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -66,13 +65,15 @@ export const FrameworkSelector: React.FC<Props> = ({
                         onClick={() => setSelectedFramework(framework.name)}
                         className={`p-4 rounded-xl border-2 transition-all duration-300 hover:scale-105 ${
                           selectedFramework === framework.name
-                            ? 'border-ocean-500 bg-gradient-to-r ' + framework.color + ' text-white shadow-lg'
-                            : 'border-gray-200 bg-white hover:border-ocean-300 hover:shadow-md'
+                            ? `border-ocean-500 bg-gradient-to-r ${framework.color} text-white shadow-lg`
+                            : 'border-gray-200 bg-white/90 backdrop-blur-sm hover:border-ocean-300 hover:shadow-md'
                         }`}
                       >
                         <div className="flex flex-col items-center space-y-2">
                           {framework.icon}
-                          <span className="text-sm font-medium text-center">
+                          <span className={`text-sm font-medium text-center ${
+                            selectedFramework === framework.name ? 'text-white' : 'text-slate-700'
+                          }`}>
                             {framework.name}
                           </span>
                         </div>

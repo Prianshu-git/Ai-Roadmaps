@@ -133,7 +133,7 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
   };
 
   return (
-    <Card className="p-8 glass-effect animate-slide-up">
+    <Card className="p-8 bg-white/90 backdrop-blur-sm animate-slide-up">
       <div className="space-y-6">
         <div className="text-center">
           <h2 className="text-3xl font-bold gradient-text mb-2">
@@ -145,15 +145,15 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
         </div>
 
         {showApiInput && (
-          <Alert className="hidden sm:flex border-orange-200 bg-orange-50">
-            <AlertCircle className="h-4 w-4 text-orange-600" />
-            <AlertDescription className="text-orange-800">
+          <Alert className="border border-ocean-200 bg-white/90 backdrop-blur-sm">
+            <AlertCircle className="h-4 w-4 text-ocean-600" />
+            <AlertDescription className="text-slate-700">
               To generate roadmaps, you'll need a Gemini API key. Get one free at{' '}
               <a 
                 href="https://makersuite.google.com/app/apikey" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="underline font-medium hover:text-orange-900"
+                className="underline font-medium text-ocean-600 hover:text-ocean-700"
               >
                 Google AI Studio
               </a>
@@ -173,7 +173,7 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
                 placeholder="Enter your Gemini API key..."
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
-                className="border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500"
+                className="bg-white/90 backdrop-blur-sm border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500"
               />
             </div>
           )}
@@ -181,7 +181,7 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
           <Button
             onClick={generateRoadmap}
             disabled={isGenerating || !selectedFramework.trim()}
-            className="w-full h-14 text-lg bg-gradient-to-r from-ocean-500 to-lavender-500 hover:from-ocean-600 hover:to-lavender-600 transition-all duration-300 transform hover:scale-105"
+            className="w-full h-14 text-lg bg-gradient-to-r from-ocean-500 to-lavender-500 hover:from-ocean-600 hover:to-lavender-600 transition-all duration-300"
           >
             {isGenerating ? (
               <>
@@ -198,7 +198,7 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
         </div>
 
         {selectedFramework && (
-          <div className="text-center p-4 bg-gradient-to-r from-ocean-50 to-lavender-50 rounded-lg border border-ocean-200">
+          <div className="text-center p-4 bg-white/90 backdrop-blur-sm rounded-lg border border-ocean-200">
             <p className="text-slate-700">
               <span className="font-medium">Framework:</span> {selectedFramework}
               {learningGoal && (

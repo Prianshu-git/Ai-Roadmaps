@@ -85,9 +85,18 @@
 }
 
 @layer base {
+  /* Prevent yellow background on mobile */
   * {
-    @apply border-border;
     -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Force white background on inputs */
+  input, select {
+    background-color: rgb(var(--background)) !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(var(--background)) inset !important;
   }
 
   body {
