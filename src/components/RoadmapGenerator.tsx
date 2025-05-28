@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -146,7 +145,7 @@ Include 6-8 steps that progress appropriately for the ${learningGoal || 'selecte
         </div>
 
         {showApiInput && (
-          <Alert className="border-orange-200 bg-orange-50">
+          <Alert className="hidden sm:flex border-orange-200 bg-orange-50">
             <AlertCircle className="h-4 w-4 text-orange-600" />
             <AlertDescription className="text-orange-800">
               To generate roadmaps, you'll need a Gemini API key. Get one free at{' '}
