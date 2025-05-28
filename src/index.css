@@ -94,6 +94,14 @@
     @apply bg-gradient-to-br from-ocean-50 via-white to-lavender-50 text-foreground;
     min-height: 100vh;
   }
+
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    background-color: rgb(var(--background)) !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(var(--background)) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
 
 @layer components {
