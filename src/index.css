@@ -1,0 +1,115 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+
+    --popover: 255 255 255;
+    --popover-foreground: 15 23 42;
+
+    --primary: 20 184 166;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 241 245 249;
+    --secondary-foreground: 15 23 42;
+
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+
+    --accent: 241 245 249;
+    --accent-foreground: 15 23 42;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 20 184 166;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 15 23 42;
+    --sidebar-primary: 20 184 166;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 20 184 166;
+  }
+
+  .dark {
+    --background: 15 23 42;
+    --foreground: 241 245 249;
+
+    --card: 15 23 42;
+    --card-foreground: 241 245 249;
+
+    --popover: 15 23 42;
+    --popover-foreground: 241 245 249;
+
+    --primary: 20 184 166;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 30 41 59;
+    --secondary-foreground: 241 245 249;
+
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+
+    --accent: 30 41 59;
+    --accent-foreground: 241 245 249;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --ring: 20 184 166;
+
+    --sidebar-background: 15 23 42;
+    --sidebar-foreground: 241 245 249;
+    --sidebar-primary: 20 184 166;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 30 41 59;
+    --sidebar-accent-foreground: 241 245 249;
+    --sidebar-border: 30 41 59;
+    --sidebar-ring: 20 184 166;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-ocean-50 via-white to-lavender-50 text-foreground;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-ocean-600 via-lavender-500 to-ocean-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/20 border border-white/30 shadow-xl;
+  }
+  
+  .roadmap-step {
+    @apply relative p-6 rounded-2xl bg-gradient-to-br from-white/80 to-ocean-50/50 border border-ocean-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .floating-orb {
+    @apply absolute rounded-full bg-gradient-to-r from-ocean-400/20 to-lavender-400/20 animate-float;
+  }
+}
