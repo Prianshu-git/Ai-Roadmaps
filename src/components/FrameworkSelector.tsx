@@ -44,7 +44,7 @@ export const FrameworkSelector: React.FC<Props> = ({
 
   return (
     <div className="space-y-8 animate-slide-up">
-      <Card className="p-8 glass-effect">
+      <Card className="p-8 bg-white/90 backdrop-blur-sm">
         <div className="space-y-6">
           <h2 className="text-3xl font-bold text-center gradient-text">
             Choose Your Learning Path
@@ -63,15 +63,15 @@ export const FrameworkSelector: React.FC<Props> = ({
                       <button
                         key={framework.name}
                         onClick={() => setSelectedFramework(framework.name)}
-                        className={`p-4 rounded-xl border-2 transition-all duration-300 hover:scale-105 ${
+                        className={`p-4 rounded-xl border transition-colors duration-200 ${
                           selectedFramework === framework.name
-                            ? `border-ocean-500 bg-gradient-to-r ${framework.color} text-white shadow-lg`
-                            : 'border-gray-200 bg-white/90 backdrop-blur-sm hover:border-ocean-300 hover:shadow-md'
+                            ? `border-ocean-500 bg-gradient-to-r ${framework.color} text-white`
+                            : 'border-gray-200 bg-white hover:border-ocean-300'
                         }`}
                       >
                         <div className="flex flex-col items-center space-y-2">
                           {framework.icon}
-                          <span className={`text-sm font-medium text-center ${
+                          <span className={`text-sm font-medium ${
                             selectedFramework === framework.name ? 'text-white' : 'text-slate-700'
                           }`}>
                             {framework.name}
@@ -94,7 +94,7 @@ export const FrameworkSelector: React.FC<Props> = ({
                 placeholder="e.g., Express.js, Laravel, Spring Boot..."
                 value={selectedFramework}
                 onChange={(e) => setSelectedFramework(e.target.value)}
-                className="border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500"
+                className="bg-white border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500"
               />
             </div>
             
@@ -103,7 +103,7 @@ export const FrameworkSelector: React.FC<Props> = ({
                 Difficulty Level
               </Label>
               <Select value={learningGoal} onValueChange={setLearningGoal}>
-                <SelectTrigger className="border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500">
+                <SelectTrigger className="bg-white border-ocean-200 focus:border-ocean-500 focus:ring-ocean-500">
                   <SelectValue placeholder="Select your level" />
                 </SelectTrigger>
                 <SelectContent>
