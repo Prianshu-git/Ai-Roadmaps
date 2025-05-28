@@ -46,6 +46,9 @@ Framework Flow AI Guide is an AI-powered application that helps you generate per
 3. Choose your desired learning level (e.g., beginner, intermediate, advanced). 🎓
 4. Click on **Generate AI Roadmap** to get your personalized learning plan. 🚀
 
+   ![Screenshot 2025-05-29 at 01-12-04 framework-flow-ai-guide](https://github.com/user-attachments/assets/aa15f949-12c3-42d4-ae48-e1b73d98809f)
+
+
 ## File Structure 📁
 
 ```
